@@ -5,10 +5,10 @@ import java.util.LinkedList;
 
 public class Watki {
 
-    LinkedList<String> list = new LinkedList<>();
-    int capacity = 1, czytaj = 0;
-    char buffer[] = new char[capacity];
-    boolean check = false;
+    private LinkedList<String> list = new LinkedList<>();
+    private int capacity = 1, czytaj = 0;
+    private char buffer[] = new char[capacity];
+    private boolean check = false;
 
     public void watekCzytajacy(FileReader plik) throws InterruptedException, IOException {
         while (czytaj != -1) {
@@ -20,7 +20,6 @@ public class Watki {
                 list.add("FULL");
                 czytaj = plik.read(buffer);
                 notifyAll();
-
 
             }
         }
@@ -35,6 +34,7 @@ public class Watki {
                     wait();
 
                 list.clear();
+                if(czytaj != -1)
                 plik.write(buffer);
                 Thread.sleep(240);
                 notifyAll();
