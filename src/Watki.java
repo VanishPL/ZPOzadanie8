@@ -58,7 +58,7 @@ public class Watki {
                 while(list.size() == 0)
                     wait();
                 System.out.println("Obsluguje " + lol + " Zapisanych ");
-                Thread.sleep(200);
+                Thread.sleep(20);
 
                 list.clear();
                 if(wri != -1)
