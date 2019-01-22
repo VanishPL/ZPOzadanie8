@@ -24,7 +24,7 @@ public class Main {
             {
                 try
                 {
-                    watki.watekCzytajacy(plik1);
+                    watki.watekCzytajacy(plik1, 0);
                 }
                 catch(InterruptedException e)
                 {
@@ -39,7 +39,7 @@ public class Main {
             @Override
             public void run() {
                 try{
-                    watki.watekCzytajacy(plik2);
+                    watki.watekCzytajacy(plik2, 1);
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }catch(Exception e){
@@ -56,7 +56,7 @@ public class Main {
             {
                 try
                 {
-                    watki.watekCzytajacy(plik3);
+                    watki.watekCzytajacy(plik3, 2);
                 }
                 catch(InterruptedException e)
                 {
